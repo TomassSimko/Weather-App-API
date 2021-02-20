@@ -13,9 +13,9 @@
         fetchWeather: function (city){
             fetch(
                 'http://api.openweathermap.org/data/2.5/weather?q='
-                 + city 
-                 + '&units=metric&appid=' 
-                 + this.apiKey 
+                + city 
+                + '&units=metric&appid='
+                + this.apiKey
             )
             .then((response) => response.json())
             .then((data) => this.displayWeather(data));
@@ -41,8 +41,8 @@
 
        
     };
-
-    weather.fetchWeather('Syktyvkar')
+ 
+    weather.fetchWeather('Denver')
 
        
   

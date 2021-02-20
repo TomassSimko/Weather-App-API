@@ -19,7 +19,7 @@ body {
 
 .main-container {
   width: 400px;
-  height: 750px;
+  height: 810px;
   border-radius: 29px;
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
   -webkit-box-shadow: 10px 10px 20px #c1c1c1, -10px -10px 20px #ffffff;
@@ -152,7 +152,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: auto;
+  margin: 0 20px 0 20px;
   border-radius: 10px;
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
   -webkit-box-shadow: 5px 4px 20px #c1c1c1, -10px -2px 20px #ffffff;
@@ -197,5 +197,40 @@ body {
 
 .box-3 .wind_ {
   font-weight: bold;
+}
+
+.search-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.search-bar {
+  height: 50px;
+  width: 150px;
+  padding: 30px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  -webkit-box-shadow: 6px 6px 17px #c1c1c1, -6px -6px 17px #ffffff;
+          box-shadow: 6px 6px 17px #c1c1c1, -6px -6px 17px #ffffff;
+  border: none;
+}
+
+.sea {
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  -webkit-box-shadow: 6px 6px 17px #c1c1c1, -6px -6px 17px #ffffff;
+          box-shadow: 6px 6px 17px #c1c1c1, -6px -6px 17px #ffffff;
 }
 /*# sourceMappingURL=sass.css.map */
