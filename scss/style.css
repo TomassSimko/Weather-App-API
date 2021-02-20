@@ -1,0 +1,112 @@
+*{
+  
+}
+
+body {
+    margin: 0 ;
+    padding: 0;
+    background-image: #dcdada;
+}
+
+.main-container{
+    width: 400px;
+    height: 700px;
+    
+    border-radius: 29px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  10px 10px 20px #c1c1c1,
+             -10px -10px 20px #ffffff;
+    display: block;
+    margin: 20px auto;
+}
+
+.weather-title p {
+    padding:30px;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+.info-container {
+    width:350px;
+    height:200px;
+    border-radius: 29px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  10px 10px 20px #c1c1c1,
+             -10px -10px 20px #ffffff;
+    display:block;
+    margin: 20px auto;
+}
+
+.location p {
+    padding-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size:30px ;
+}
+
+.temperature-value p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 70px;
+}
+
+.temperature-description p {
+    text-align: center;
+    margin-top: -10px;
+    color: blue;
+    
+
+}
+
+.date p {
+    padding:30px;
+    margin: auto ;
+
+
+}
+
+.menu-container{
+    display:flex;
+    justify-content: space-around;
+   
+}
+
+.flexbox {
+    width:100px;
+    margin:10px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  10px 10px 20px #c1c1c1,
+             -10px -10px 20px #ffffff;
+}
+
+.first-div {
+    min-height: 50px;
+    
+}
+
+.second-div{
+    min-height: 40px;
+}
+.third-div{
+    min-height: 150px;
+}
+
+.city {
+    text-align: center;
+
+}
+
+.city img {
+    width:50px;
+}
+
+
+
+
+
+
+
+
+

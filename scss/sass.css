@@ -1,0 +1,201 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.3;
+  background-color: #dcdada;
+}
+
+.main-container {
+  width: 400px;
+  height: 750px;
+  border-radius: 29px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  -webkit-box-shadow: 10px 10px 20px #c1c1c1, -10px -10px 20px #ffffff;
+          box-shadow: 10px 10px 20px #c1c1c1, -10px -10px 20px #ffffff;
+  display: block;
+  margin: 20px auto;
+}
+
+.weather-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.weather-title p {
+  padding: 30px;
+  font-weight: bold;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+.info-container {
+  width: 350px;
+  height: 200px;
+  border-radius: 29px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  -webkit-box-shadow: 10px 10px 20px #c1c1c1, -10px -10px 20px #ffffff;
+          box-shadow: 10px 10px 20px #c1c1c1, -10px -10px 20px #ffffff;
+  display: block;
+  margin: 20px auto;
+}
+
+.location {
+  padding-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#temperature-value {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 70px;
+}
+
+.temperature-description {
+  text-align: center;
+  font-weight: bold;
+  margin-top: -10px;
+  color: #0c6fe0;
+}
+
+#date {
+  padding: 30px;
+  margin: auto;
+  font-weight: bold;
+}
+
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flexbox {
+  width: 100px;
+  margin: 10px 0 40px 0;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  -webkit-box-shadow: 10px 10px 20px #c1c1c1, -10px -10px 20px #ffffff;
+          box-shadow: 10px 10px 20px #c1c1c1, -10px -10px 20px #ffffff;
+}
+
+.first-div {
+  min-height: 50px;
+}
+
+.first-div .date {
+  font-weight: bold;
+}
+
+.first-div .bottom-temp-value {
+  font-size: 30px;
+  margin: auto;
+}
+
+.second-div {
+  min-height: 40px;
+}
+
+.second-div .date2 {
+  font-weight: bold;
+}
+
+.second-div .temp2 {
+  font-size: 30px;
+  margin: auto;
+}
+
+.third-div {
+  min-height: 150px;
+}
+
+.third-div .date3 {
+  font-weight: bold;
+}
+
+.third-div .temp3 {
+  font-size: 30px;
+  margin: auto;
+}
+
+.city {
+  text-align: center;
+}
+
+.city img {
+  width: 45px;
+}
+
+.detail-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: auto;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  -webkit-box-shadow: 5px 4px 20px #c1c1c1, -10px -2px 20px #ffffff;
+          box-shadow: 5px 4px 20px #c1c1c1, -10px -2px 20px #ffffff;
+}
+
+.box-1 {
+  min-height: 50px;
+}
+
+.box-1 p {
+  font-size: 17px;
+}
+
+.box-1 .feels {
+  font-weight: bold;
+}
+
+.box-2 {
+  min-height: 50px;
+}
+
+.box-2 p {
+  font-size: 17px;
+}
+
+.box-2 .humidity_ {
+  font-weight: bold;
+}
+
+.box-2 .pressure_ {
+  font-weight: bold;
+}
+
+.box-3 {
+  min-height: 50px;
+}
+
+.box-3 p {
+  font-size: 17px;
+}
+
+.box-3 .wind_ {
+  font-weight: bold;
+}
+/*# sourceMappingURL=sass.css.map */
