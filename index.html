@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/scss/sass.css">
+    <link rel="stylesheet" href="/scss/style.css">
     <title>Class TDL</title>
 </head>
 <body>
+
    <div class="main-container">
-       <div class="weather-title">
+       <div class="weather-title flex flex-jc-sb">
            <div class="weather1">
             <p>Weather</p>
            </div>
            <div class="info">
-               <p>i</p>
+            <button class="info-btn">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="3em" width="3em" xmlns="http://www.w3.org/2000/svg"><path d="M448 224a64 64 0 1 0 128 0 64 64 0 1 0-128 0zm96 168h-64c-4.4 0-8 3.6-8 8v464c0 4.4 3.6 8 8 8h64c4.4 0 8-3.6 8-8V400c0-4.4-3.6-8-8-8z"></path></svg>
+            </button>
            </div>
            
 
@@ -23,7 +26,7 @@
 
        <div class="info-container">
         <div class="location"></div>
-        <div id="temperature-value"></div>
+        <div class="temperature-value"></div>
         <div class="temperature-description">
            
         </div>
@@ -32,7 +35,7 @@
 
         <div id="date"></div>
         
-        <div class="menu-container">
+        <div class="flex flex-jc-sa">
             <div class=" flexbox first-div">
                 <div class="city">
                     <p class="date">Now</p>
@@ -45,18 +48,18 @@
             </div>
             <div class=" flexbox second-div">
                 <div class="city">
-                    <p class="date2">Sunday</p>
+                    <p class="date2"></p>
                     <div class="temperature-val">
-                        <p class="temp2">25°</p>
+                        <p class="temp2">5°</p>
                     </div>
                     <img src="/icons/02n.png" alt="">
                 </div>
             </div>
             <div class="flexbox third-div">
                 <div class="city">
-                    <p class="date3">Monday</p>
+                    <p class="date3"></p>
                     <div class="temperature-val">
-                        <p class="temp3">45°</p>
+                        <p class="temp3">6°</p>
                     </div>
                     <img src="/icons/01n.png" alt="">
                 </div>
@@ -64,12 +67,11 @@
            
         </div>
 
-        <div class="detail-container">
+        <div class="detail-container flex flex-jc-sa">
             <div class="box-1">
                 <p class="feels_like"></p>
                 <p class="feels">Feels like</p>
-                
-            </div>
+        </div>
 
             <div class="box-2">
                 <p class="humidity"></p>
@@ -82,24 +84,23 @@
             </div>
         </div>
 
-<div class="search-field">
-        <input type="text" class="search-bar" placeholder="Search city">
-        <button class="sea">
+<div class="flex flex-jc-sb flex-jc-se flex-ai-c search">
+        <input type="text" class="search-bar" placeholder="Search city" >
+        <button class="search-btn">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1.5em" width="2em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"></path></svg>
-        </button>
-        <button class="sea">
+         </button>
+        <button class="transfer-btn">
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="2em" width="4em" xmlns="http://www.w3.org/2000/svg"><g><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 12h7v2h-7v7h-2V8a4 4 0 0 1 4-4h7v2h-7a2 2 0 0 0-2 2v4zm-7.5-2a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path></g></svg>
-        </button>
+        </button> 
+        
+
+        <div id='date2'></div>
+
+        
         
 </div>
-
-    
-         
-      </div>
-
-   </div>
-
-
-    <script src="/js/main.js"></script>
+</div>
+</div>
+<script src="/js/main.js"></script>
 </body>
 </html>
