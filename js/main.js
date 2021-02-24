@@ -12,7 +12,6 @@
    
     
     let weather = {
-    
         apiKey : 'b5ca0a803da945e46f33c61e65f7c77e',
         fetchWeather: function (city){
             fetch(
@@ -25,14 +24,13 @@
             .then((data) => this.displayWeather(data));
             
         },
-        
+//** Displayed data from JSON */
         displayWeather : function(data){
            const {name} = data;
            const {temp,feels_like,humidity} = data.main;
            const {main,icon} = data.weather[0];
            const {speed} = data.wind;
 
-           
            console.log(name,temp,main,feels_like,humidity,speed,icon)
            document.querySelector('.location').innerText = name;
            document.querySelector('.temperature-value').innerText = Math.floor(temp)+ '°' ;
@@ -42,24 +40,26 @@
            document.querySelector('.humidity').innerText = humidity + '%';
            document.querySelector('.wind').innerText = speed + ' km/h';
            document.querySelector('.icon').src = "/icons/" + icon + ".png";
+           
         },
-
+ //** function for search */
        search : function(){
            this.fetchWeather(document.querySelector('.search-bar').value);
         },
 };
+ //** event listeners  */
         document.querySelector('.search-btn').addEventListener('click',function(){
             weather.search();
             document.querySelector('.search-bar').value = "";
     });
+
         document.querySelector('.search-bar').addEventListener('keyup',function(e){
             if(e.key === 'Enter'){
                 weather.search();
                 document.querySelector('.search-bar').value = "";
             };
+         });
 
-             
-    });
 
     weather.fetchWeather('Esbjerg')
 
@@ -95,10 +95,13 @@ document.querySelector('.date3').innerHTML = showDetails2();
    
  // weekdays[d.getDay()] + weekdays[d.getDay() + 1] + weekdays[d.getDay() + 2] 
 
+console.dir(document.querySelector('.temperature-value'));
 
 
-    
-       
+
+
+
+
   
    
 
