@@ -10,18 +10,20 @@
 </head>
 <body>
 
-   <div class="main-container">
+   <div class="main-container" >
        <div class="weather-title flex flex-jc-sb">
            <div class="weather1">
-            <p>Weather</p>
+            <p class="header_name">Weather</p>
            </div>
-           <div class="info">
-            <button class="info-btn">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="3em" width="3em" xmlns="http://www.w3.org/2000/svg"><path d="M448 224a64 64 0 1 0 128 0 64 64 0 1 0-128 0zm96 168h-64c-4.4 0-8 3.6-8 8v464c0 4.4 3.6 8 8 8h64c4.4 0 8-3.6 8-8V400c0-4.4-3.6-8-8-8z"></path></svg>
-            </button>
+           <div class="wrapper-color-switch flex flex-ai-c ">
+            <input type="checkbox" id="input-color-switch">  
+                <label for="input-color-switch" class='color-switch'>
+                    <div class="color-switch-toggle"></div>
+                </label>
+           </input>
            </div>
            
-
+           
        </div>
 
        <div class="info-container">
@@ -33,7 +35,7 @@
        
         </div>
 
-        <div id="date"></div>
+        <div id="date" class='__date'></div>
         
         <div class="flex flex-jc-sa">
             <div class=" flexbox first-div">
@@ -48,18 +50,18 @@
             </div>
             <div class=" flexbox second-div">
                 <div class="city">
-                    <p class="date2"></p>
+                    <p class="date2">Min</p>
                     <div class="temperature-val">
-                        <p class="temp2">5°</p>
+                        <p class="temp2"></p>
                     </div>
                     <img src="/icons/02n.png" alt="">
                 </div>
             </div>
             <div class="flexbox third-div">
                 <div class="city">
-                    <p class="date3"></p>
+                    <p class="date3">Max</p>
                     <div class="temperature-val">
-                        <p class="temp3">6°</p>
+                        <p class="temp3"></p>
                     </div>
                     <img src="/icons/01n.png" alt="">
                 </div>
@@ -94,7 +96,7 @@
         </button> 
         
 
-        <div class="date_"></div>
+        
 
        
 

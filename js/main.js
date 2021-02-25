@@ -1,4 +1,4 @@
-    document.getElementById("date").innerHTML = formatDate();
+document.getElementById("date").innerHTML = formatDate();
 
 
     function formatDate() {
@@ -27,19 +27,22 @@
 //** Displayed data from JSON */
         displayWeather : function(data){
            const {name} = data;
-           const {temp,feels_like,humidity} = data.main;
+           const {temp,feels_like,humidity,temp_min,temp_max} = data.main;
            const {main,icon} = data.weather[0];
            const {speed} = data.wind;
 
-           console.log(name,temp,main,feels_like,humidity,speed,icon)
+           console.log(name,temp,main,feels_like,humidity,speed,icon,temp_min,temp_max)
            document.querySelector('.location').innerText = name;
            document.querySelector('.temperature-value').innerText = Math.floor(temp)+ '°' ;
            document.querySelector('.bottom-temp-value').innerText = Math.floor(temp) + '°';
+           document.querySelector('.temp2').innerText= Math.floor(temp_min) + '°';
+           document.querySelector('.temp3').innerText= Math.floor(temp_max) + '°';
            document.querySelector('.temperature-description').innerText = main;
            document.querySelector('.feels_like').innerText = Math.floor(feels_like) + '°';
            document.querySelector('.humidity').innerText = humidity + '%';
            document.querySelector('.wind').innerText = speed + ' km/h';
            document.querySelector('.icon').src = "/icons/" + icon + ".png";
+           document.querySelector('.info-container').style.backgroundImage = "url('https://source.unsplash.com/350x200/?" + name + "')"
            
         },
  //** function for search */
@@ -61,48 +64,31 @@
          });
 
 
-    weather.fetchWeather('Esbjerg')
+    weather.fetchWeather('Prague')
 
-// ** Current and following dates - EDIT 
+    
+const colorSwitch = document.querySelector('#input-color-switch');
 
-function showDetails(){
-    let d = new Date ();
-    let weekdays = new Array (7);
-    weekdays[0] = "Sunday";
-    weekdays[1] = "Monday";
-    weekdays[2] = "Tuesday";
-    weekdays[3] = "Wednesday";
-    weekdays[4] = "Thursday";
-    weekdays[5] = "Friday";
-    weekdays[6] = "Saturday";
-    return  weekdays[d.getDay() + 1]  
+colorSwitch.addEventListener('click',checkMode);
+
+function checkMode (){
+    console.log('checking')
+    if(colorSwitch.checked){
+        console.log('dark on')
+        darkModeOn();
+
+    }
+    else {
+        console.log ('dark off')
+        darkModeOff();
+    }
 }
 
-function showDetails2(){
-    let d = new Date ();
-    let weekdays = new Array (7);
-    weekdays[0] = "Sunday";
-    weekdays[1] = "Monday";
-    weekdays[2] = "Tuesday";
-    weekdays[3] = "Wednesday";
-    weekdays[4] = "Thursday";
-    weekdays[5] = "Friday";
-    weekdays[6] = "Saturday";
-    return  weekdays[d.getDay() + 2]  
+function darkModeOn () {
+    document.body.classList.add('dark-mode');
 }
-document.querySelector('.date2').innerHTML = showDetails();
-document.querySelector('.date3').innerHTML = showDetails2();
-   
- // weekdays[d.getDay()] + weekdays[d.getDay() + 1] + weekdays[d.getDay() + 2] 
 
-console.dir(document.querySelector('.temperature-value'));
-
-
-
-
-
-
-  
-   
-
+function darkModeOff (){
+    document.body.classList.remove('dark-mode');
+}
 

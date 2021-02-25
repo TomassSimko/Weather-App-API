@@ -12,6 +12,42 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.3;
     background-image: $backgroundColor;
+
+    
+    
+}
+
+.dark-mode {
+    background-image: $darkThemeBcg;
+
+    .header_name{
+        color:$strdWhite;
+    }
+    .__date{
+         color: $strdWhite;
+    }
+
+    .main-container {
+        background-image: $darkThemeBcg;
+    
+        .flexbox {
+            background-image:$boxColor;
+            box-shadow: none;
+        }
+        .detail-container {
+            box-shadow: none;
+        }
+        .search-bar{
+            box-shadow:none;
+        }
+        .search-btn{
+            box-shadow: none;
+        }
+        .transfer-btn{
+            box-shadow: none;
+        }
+    }
+    
 }
 
 .flex {
@@ -34,3 +70,4 @@ body {
     }
 
 }
+
