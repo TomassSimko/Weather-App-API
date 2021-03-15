@@ -47,12 +47,24 @@ document.getElementById("date").innerHTML = formatDate();
            document.querySelector('.info-container').style.backgroundImage = "url('https://source.unsplash.com/350x200/?" + name + "')"
 //** Fahrnheit transfer */          
             var transfer = document.querySelector('.transfer-btn');
-            var test = document.querySelector('.temperature-value').innerHTML;
+            var mValue = document.querySelector('.temperature-value').innerHTML;
+            var bValue = document.querySelector('.bottom-temp-value').innerHTML;
+            var minValue = document.querySelector('.temp2').innerHTML;
+            var maxValue = document.querySelector('.temp3').innerHTML;
+            var feelsLike = document.querySelector('.feels_like').innerHTML;
             transfer.addEventListener('click',cToF);
            
             function cToF () {
-               counter = Math.round(parseInt(test) * 1.8) + 32;
-               num1 = document.querySelector('.temperature-value').innerText = counter + '°F';
+               counter = Math.round(parseInt(mValue) * 1.8) + 32;
+               counter2 = Math.round(parseInt(bValue) * 1.8) + 32;
+               counter3 = Math.round(parseInt(minValue) * 1.8) + 32;
+               counter4 = Math.round(parseInt(maxValue) * 1.8) + 32;
+               counter5 = Math.round(parseInt(feelsLike) * 1.8) + 32;
+               num1 = document.querySelector('.temperature-value').innerHTML = counter + '°F';
+               num2 = document.querySelector('.bottom-temp-value').innerHTML = counter2 + '°F';
+               num3 = document.querySelector('.temp2').innerHTML = counter3 +'°F';
+               num4 = document.querySelector('.temp3').innerHTML = counter4 +'°F';
+               num4 = document.querySelector('.feels_like').innerHTML = counter5 +'°F';
             }
             
 //** deletion of error msg */        
@@ -83,7 +95,6 @@ const colorSwitch = document.querySelector('#input-color-switch');
 colorSwitch.addEventListener('click',checkMode);
 
 function checkMode (){
-    console.log('checking')
     if(colorSwitch.checked){
         darkModeOn();
     }
