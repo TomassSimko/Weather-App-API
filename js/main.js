@@ -1,6 +1,5 @@
 document.getElementById("date").innerHTML = formatDate();
-
-
+//** Day & Time */
     function formatDate() {
         let d = new Date(),
         month = d.getMonth()+1;
@@ -8,9 +7,7 @@ document.getElementById("date").innerHTML = formatDate();
         
     return `${days[d.getDay()]} - ${d.getDate()}.${month}.${d.getFullYear()}`;
     }
-    
-   
-    
+//** Fetch Weather OpenWeatherMap */
     let weather = {
         apiKey : 'b5ca0a803da945e46f33c61e65f7c77e',
         fetchWeather: function (city){
@@ -23,14 +20,10 @@ document.getElementById("date").innerHTML = formatDate();
             .then((response) => response.json())
             .then((data) => this.displayWeather(data))
             .catch((data) => this.displayError(data));
-            
-            
-        },
+            },
         
         displayError : function (){
             document.querySelector('.error-msg').innerText = 'City not found'
-            
-           // console.log('City not found')
         },
 //** Displayed data from JSON */
 
@@ -39,7 +32,7 @@ document.getElementById("date").innerHTML = formatDate();
            const {temp,feels_like,humidity,temp_min,temp_max} = data.main;
            const {main,icon} = data.weather[0];
            const {speed} = data.wind;
-
+//** Locations of Json data */
            console.log(name,temp,main,feels_like,humidity,speed,icon,temp_min,temp_max)
            document.querySelector('.location').innerText = name;
            document.querySelector('.temperature-value').innerText = Math.floor(temp)+ '°' ;
@@ -52,7 +45,6 @@ document.getElementById("date").innerHTML = formatDate();
            document.querySelector('.wind').innerText = speed + ' km/h';
            document.querySelector('.icon').src = "/icons/" + icon + ".png";
            document.querySelector('.info-container').style.backgroundImage = "url('https://source.unsplash.com/350x200/?" + name + "')"
-
 //** Fahrnheit transfer */          
             var transfer = document.querySelector('.transfer-btn');
             var test = document.querySelector('.temperature-value').innerHTML;
@@ -63,7 +55,7 @@ document.getElementById("date").innerHTML = formatDate();
                num1 = document.querySelector('.temperature-value').innerText = counter + '°F';
             }
             
-//** shitty deletion */        
+//** deletion of error msg */        
 document.querySelector('.error-msg').innerText = '';
 },
 //** function for search */
@@ -84,29 +76,24 @@ document.querySelector('.error-msg').innerText = '';
             };
          });
 
+weather.fetchWeather('Prague') //** Base city */
 
-    weather.fetchWeather('Prague')
-
-    
+//** Dark mode */    
 const colorSwitch = document.querySelector('#input-color-switch');
-
 colorSwitch.addEventListener('click',checkMode);
 
 function checkMode (){
     console.log('checking')
     if(colorSwitch.checked){
         darkModeOn();
-
     }
     else {
         darkModeOff();
     }
 }
-
 function darkModeOn () {
     document.body.classList.add('dark-mode');
 }
-
 function darkModeOff (){
     document.body.classList.remove('dark-mode');
 }
