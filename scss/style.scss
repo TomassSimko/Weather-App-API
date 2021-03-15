@@ -3,7 +3,7 @@
 
 .main-container{
     width: 400px;
-    height: 810px;
+    height: 825px;
     border-radius: 29px;
     background: $boxColor;
     box-shadow:  $boxShadows;
@@ -43,7 +43,7 @@
 .temperature-value  {
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: $tempValue;
     color: $strdWhite;
 }
@@ -218,3 +218,8 @@
 
 
 
+.error-msg {
+    padding: 5px 150px;
+    color:red;
+    font-size: 15px;
+}

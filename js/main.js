@@ -21,10 +21,19 @@ document.getElementById("date").innerHTML = formatDate();
                 + this.apiKey
             )
             .then((response) => response.json())
-            .then((data) => this.displayWeather(data));
+            .then((data) => this.displayWeather(data))
+            .catch((data) => this.displayError(data));
+            
             
         },
+        
+        displayError : function (){
+            document.querySelector('.error-msg').innerText = 'City not found'
+            
+           // console.log('City not found')
+        },
 //** Displayed data from JSON */
+
         displayWeather : function(data){
            const {name} = data;
            const {temp,feels_like,humidity,temp_min,temp_max} = data.main;
@@ -43,9 +52,21 @@ document.getElementById("date").innerHTML = formatDate();
            document.querySelector('.wind').innerText = speed + ' km/h';
            document.querySelector('.icon').src = "/icons/" + icon + ".png";
            document.querySelector('.info-container').style.backgroundImage = "url('https://source.unsplash.com/350x200/?" + name + "')"
+
+//** Fahrnheit transfer */          
+            var transfer = document.querySelector('.transfer-btn');
+            var test = document.querySelector('.temperature-value').innerHTML;
+            transfer.addEventListener('click',cToF);
            
-        },
- //** function for search */
+            function cToF () {
+               counter = Math.round(parseInt(test) * 1.8) + 32;
+               num1 = document.querySelector('.temperature-value').innerText = counter + '°F';
+            }
+            
+//** shitty deletion */        
+document.querySelector('.error-msg').innerText = '';
+},
+//** function for search */
        search : function(){
            this.fetchWeather(document.querySelector('.search-bar').value);
         },
@@ -74,12 +95,10 @@ colorSwitch.addEventListener('click',checkMode);
 function checkMode (){
     console.log('checking')
     if(colorSwitch.checked){
-        console.log('dark on')
         darkModeOn();
 
     }
     else {
-        console.log ('dark off')
         darkModeOff();
     }
 }

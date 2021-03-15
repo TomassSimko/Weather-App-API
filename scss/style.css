@@ -96,7 +96,7 @@ body {
 
 .main-container {
   width: 400px;
-  height: 810px;
+  height: 825px;
   border-radius: 29px;
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
   -webkit-box-shadow: 10px 10px 20px #c1c1c1, -10px -10px 20px #ffffff;
@@ -141,7 +141,7 @@ body {
 .temperature-value {
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 4.375rem;
   color: #FFF;
 }
@@ -341,5 +341,11 @@ body {
 #input-color-switch:checked ~ label .color-switch-toggle {
   -webkit-transform: translatex(2em);
           transform: translatex(2em);
+}
+
+.error-msg {
+  padding: 5px 150px;
+  color: red;
+  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */
